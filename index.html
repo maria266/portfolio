@@ -10,12 +10,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/portfolio.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
         @import 'https://fonts.googleapis.com/css?family=Raleway';
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -37,17 +38,35 @@
     <div class="loading-screen">
 
         <div class="top">
-            <h1 style="color:white;text-align:center;vertical-align:middle;font-size:200px;">Portfolio</h1>
+          <div class="container" style="font-family: 'Inconsolata', monospace;">
+              <div class="row">
+                  <div class="col-md-6"> <img src="img/polaroid.png" alt=""></div>
+                  <div class="col-md-6"><h1 style="font-size:70px;">Portfolio</h1>
+                  <hr>
+                  <h1>Name: Maria Kotova
+                  <br>
+                  <hr>
+                  City: Odessa
+                  <br>
+                  <hr>
+                  </h1>
+                  
+                  
+</div>
+              </div>
+          </div>
+          
+            
             <div class="loading-screen__logo" id="logo">
 
-                <p style="text-align:center">
+                <p style="text-align:center; color:white;font-family: 'Inconsolata', monospace;">
 
 
 
 
                     <button class="btn btn-link"><span style="font-size:25px;color:black;" class="glyphicon glyphicon-home" aria-hidden="true" id="logo"></span></button>
 
-                    <br> Welcome!
+                    <br> Tap Anywhere <br> 
                 </p>
             </div>
 
@@ -56,31 +75,30 @@
     </div>
 
     <script>
-        setTimeout(function () {
-            $('.top').slideUp(1800);
-        }, 2000);
-        //    $('#logo').click(function()
-        //      $(document).ready(function(){
-        //           $('.top').slideUp(2500);
-        //           
-        //        });
-        $(document).ready(function () {
-            $("#learn").on("click", "a", function (event) {
-                //отменяем стандартную обработку нажатия по ссылке
-                event.preventDefault();
-
-                //забираем идентификатор бока с атрибута href
-                var id = $(this).attr('href'),
-
-                    //узнаем высоту от начала страницы до блока на который ссылается якорь
-                    top = $(id).offset().top;
-
-                //анимируем переход на расстояние - top за 1500 мс
-                $('body,html').animate({
-                    scrollTop: top
-                }, 1500);
-            });
-        });
+//        setTimeout(function () {
+//            $('.top').slideUp(3000);
+//        }, 2000);
+            $(document).click(function(){
+                   $('.top').slideUp(2500);
+                   
+                });
+//        $(document).ready(function () {
+//            $("#learn").on("click", "a", function (event) {
+//                //отменяем стандартную обработку нажатия по ссылке
+//                event.preventDefault();
+//
+//                //забираем идентификатор бока с атрибута href
+//                var id = $(this).attr('href'),
+//
+//                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+//                    top = $(id).offset().top;
+//
+//                //анимируем переход на расстояние - top за 1500 мс
+//                $('body,html').animate({
+//                    scrollTop: top
+//                }, 1500);
+//            });
+//        });
     </script>
     <!-- Navigation -->
     <a id="menu-toggle" href="index.html" class="btn btn-dark btn-lg toggle">
