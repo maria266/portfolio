@@ -192,7 +192,7 @@ hr.small {
     height: 400px;
     color: #fff;
     text-shadow: black 0 0 10px;
-    background: url(callout.jpg.jpg);
+/*    background: url(callout.jpg.jpg);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -263,9 +263,11 @@ footer {
 /*    padding: 0 auto;*/
 }
 .carousel-inner > .item > img {
+    
 
      width: 740px;
     height: 350px;
+/*    max-height: 350px;*/
 /*    margin: 0 auto;*/
     
 
@@ -278,8 +280,33 @@ footer {
 
 .loading-screen { pointer-events: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 10002; }/*делает шторку непрозрачной*/
 
-.loading-screen .top { position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: #efd097; overflow: hidden;}
+.loading-screen .top {  position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: #efd097; overflow: hidden;}
 .loading-screen .top .loading-screen__logo { bottom: -70px; z-index: 3; }/*положение внизу */
 
 
 .loading-screen__logo { display: block; width: 140px; height: 140px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; position: absolute; background:#473411; left: 50%; margin-left: -70px; }/*КРУГ*/
+body {
+  background: url(../img/marclorenzskycloudytimelapsemp4.mp4);
+  background-size: cover;
+}
+
+.bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -9999;
+}
+#txt{
+    
+    
+    background: rgba( 255, 255,255, 0.1);
+    
+}
+.lead{
+    
+    margin-top: 20px;
+}
