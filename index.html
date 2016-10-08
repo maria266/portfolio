@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
@@ -15,10 +18,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="js/navbar.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
     <!-- Latest compiled and minified JavaScript -->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
@@ -30,23 +33,24 @@
     <![endif]-->
 </head>
 
+<body>
+    
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+        <source src="img/marclorenzskycloudytimelapsemp4.mp4" type="video/mp4">
+    </video>
 
-<video autoplay loop muted class="bgvideo" id="bgvideo">
-    <source src="img/marclorenzskycloudytimelapsemp4.mp4" type="video/mp4">
-</video>
 
 
+    <div class="loading-screen">
 
-<div class="loading-screen">
-
-    <div class="top">
-        <div class="container" style="font-family: 'Inconsolata', monospace;">
-            <div class="row">
-                <div class="col-md-6"> <img src="img/polaroid.png" alt=""></div>
-                <div class="col-md-6">
-                    <h1 style="font-size:70px;">Portfolio</h1>
-                    <hr>
-                    <h1>Name: Maria Kotova
+        <div class="top">
+            <div class="container" style="font-family: 'Inconsolata', monospace;">
+                <div class="row">
+                    <div class="col-md-6"> <img src="img/polaroid.png" alt=""></div>
+                    <div class="col-md-6">
+                        <h1 style="font-size:70px;">Portfolio</h1>
+                        <hr>
+                        <h1>Name: Maria Kotova
                   <br>
                   <hr>
                   City: Odessa
@@ -55,148 +59,185 @@
                   </h1>
 
 
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="loading-screen__logo" id="logo">
+
+                <p style="text-align:center; color:white;font-family: 'Inconsolata', monospace;">
+
+
+
+
+                    <button class="btn btn-link"><span style="font-size:25px;color:black;" class="glyphicon glyphicon-home" aria-hidden="true" id="logo"></span></button>
+
+                    <br> Tap Anywhere
+                    <br>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        //        setTimeout(function () {
+        //            $('.top').slideUp(3000);
+        //        }, 2000);
+        //Click anywhere and layer slides up
+        $(document).click(function () {
+            $('.top').slideUp(2500);
+        });
+        //smooth scrolling
+        $(document).ready(function () {
+            $("#learn").click(function () {
+                var elementClick = $(this).attr("href");
+                var destination = $(elementClick).offset().top;
+                $('html,body').animate({
+                    scrollTop: destination
+                }, 1100);
+                return false;
+            });
+        });
+        $(document).ready(function () {
+            $("#toContact").click(function () {
+                var elementClick = $(this).attr("href");
+                var destination = $(elementClick).offset().top;
+                $('html,body').animate({
+                    scrollTop: destination
+                }, 1100);
+                return false;
+            });
+        });
+
+            $(document).ready(function(){
+                $('#sidebar-wrapper').hide();
+          $("#menu-toggle").click(function(){ 
+            $("#sidebar-wrapper").slideToggle(700);
+              
+          });
+                
+                $("#menu-close").click(function(){ 
+            $('#sidebar-wrapper').slideToggle(700);
+        });
+                });
+    </script>
+    <!-- Navigation -->
+
+    
+<a id="menu-toggle" href="#"  class="btn btn-dark btn-lg toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+            <li class="sidebar-brand">
+                <a href="#top">Maria Kotova</a>
+            </li>
+            <li>
+                <a href="#top">Home</a>
+            </li>
+            <li>
+                <a href="#about" >About</a>
+            </li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" >Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Header -->
+    <div id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Maria Kotova</h1>
+            <h2>Front-end Developer</h2>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg" id="learn">Learn more</a>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="about">
+        <div class="container" id="info">
+            <div class="row" id="txt">
+                <div class="col-lg-4 text-center main">
+
+                    <p class="lead" style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.<a id="toContact" href="#contact">Contacts</a></p>
+                </div>
+                <div class="col-lg-4 text-center" style="color:black;">
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.</p>
+                </div>
+                <div class="col-lg-4 text-center" style="color:black;">
+
+                    <p class="lead" id="toContact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#carousel" data-slide="0"></li>
+            <li data-target="#carousel" data-slide="1"></li>
+            <li data-target="#carousel" data-slide="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/one.jpg" alt="" class="img-responsive">
+                <div class="carousel-caption">
+                    <h3>LOREM</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/two.jpg" alt="" class="img-responsive">
+                <div class="carousel-caption">
+                    <h3>LOREM</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/one.jpg" alt="" class="img-responsive">
+                <div class="carousel-caption">
+                    <h3>LOREM</h3>
                 </div>
             </div>
         </div>
-
-
-        <div class="loading-screen__logo" id="logo">
-
-            <p style="text-align:center; color:white;font-family: 'Inconsolata', monospace;">
-
-
-
-
-                <button class="btn btn-link"><span style="font-size:25px;color:black;" class="glyphicon glyphicon-home" aria-hidden="true" id="logo"></span></button>
-
-                <br> Tap Anywhere
-                <br>
-            </p>
-        </div>
-
+        <a href="#carousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
 
-</div>
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>My Works</h2>
+                    <hr class="small">
+                    <div class="row">
 
-<script>
-    //        setTimeout(function () {
-    //            $('.top').slideUp(3000);
-    //        }, 2000);
-    //Click anywhere and layer slides up
-    $(document).click(function () {
-        $('.top').slideUp(2500);
-});
-    //smooth scrolling
-$(document).ready(function() {
-    $("#learn").click(function () { 
-      var elementClick = $(this).attr("href");
-      var destination = $(elementClick).offset().top;
-      $('html,body').animate( { scrollTop: destination }, 1100 );
-      return false;
-    });
-  });
-    $(document).ready(function() {
-    $("#toContact").click(function () { 
-      var elementClick = $(this).attr("href");
-      var destination = $(elementClick).offset().top;
-      $('html,body').animate( { scrollTop: destination }, 1100 );
-      return false;
-    });
-  });
-    $(document).ready(function(){
-  $(".toggle").click(function(){ 
-    $(".menu").slideToggle(700);
-  });
-});
-</script>
-<!-- Navigation -->
-
-<!-- Header -->
-<div id="top" class="header">
-    <div class="text-vertical-center">
-        <h1>Maria Kotova</h1>
-        <h2>Front-end Developer</h2>
-        <br>
-        <a href="#about" class="btn btn-dark btn-lg" id="learn">Learn more</a>
-    </div>
-</div>
-
-<!-- About -->
-<div id="about" class="about">
-    <div class="container" id="info">
-        <div class="row" id="txt">
-            <div class="col-lg-4 text-center main" >
-                
-                <p class="lead" style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.<a id="toContact" href="#contact">Contacts</a></p>
-            </div>
-            <div class="col-lg-4 text-center" style="color:black;">
-                
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.</p>
-            </div>
-            <div class="col-lg-4 text-center" style="color:black;">
-                
-                <p class="lead" id="toContact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit aut sequi molestias voluptates voluptas hic, consequuntur id magni illo delectus incidunt recusandae, deleniti impedit eum officiis! Eligendi, asperiores qui.</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-<div id="carousel" class="carousel slide">
-    <ol class="carousel-indicators">
-        <li class="active" data-target="#carousel" data-slide="0"></li>
-        <li data-target="#carousel" data-slide="1"></li>
-        <li data-target="#carousel" data-slide="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="img/one.jpg" alt="" class="img-responsive">
-            <div class="carousel-caption">
-                <h3>LOREM</h3>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/two.jpg" alt="" class="img-responsive">
-            <div class="carousel-caption">
-                <h3>LOREM</h3>
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/one.jpg" alt="" class="img-responsive">
-            <div class="carousel-caption">
-                <h3>LOREM</h3>
-            </div>
-        </div>
-    </div>
-    <a href="#carousel" class="left carousel-control" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a href="#carousel" class="right carousel-control" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-</div>
-
-<div id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>My Works</h2>
-                <hr class="small">
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <a href="">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                            </a>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <a href="">
-                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                            </a>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                </a>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -207,36 +248,37 @@ $(document).ready(function() {
 
     </div>
 
-</div>
-
-<!-- Footer -->
-<div>
-    <div class="container" id="contact">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h4><strong>Contacts</strong>
+    <!-- Footer -->
+    <div>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Contacts</strong>
                     </h4>
-                <p>Odessa
-                    <br>Ukraine</p>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-phone fa-fw"></i> 123-456-7890</li>
-                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
-                    </li>
-                </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright © 2016</p>
+                    <p>Odessa
+                        <br>Ukraine</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> 123-456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright © 2016</p>
+                </div>
             </div>
         </div>
+        <a href=#index.html style="display: none; position: fixed;">TOP</a>
     </div>
-    <a href=#index.html style="display: none; position: fixed;">TOP</a>
-</div>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
