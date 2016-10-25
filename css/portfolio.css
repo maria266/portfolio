@@ -7,8 +7,9 @@ body {
 body {
     font-family: 'Raleway', sans-serif;
 }
-h2{
-   font-family: 'Raleway', sans-serif; 
+
+h2 {
+    font-family: 'Raleway', sans-serif;
 }
 
 .text-vertical-center {
@@ -24,39 +25,42 @@ h2{
     font-weight: 700;
 }
 
+
 /* Custom Button Styles */
 
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn-light {
     border-radius: 0;
     color: #333;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
     color: #333;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 /* Custom Horizontal Rule */
 
 hr.small {
     max-width: 100px;
 }
+
 
 /* Side Menu */
 
@@ -66,11 +70,11 @@ hr.small {
     right: 0;
     width: 250px;
     height: 40%;
-/*    transform: translateX(250px);*/
+    /*    transform: translateX(250px);*/
     overflow-y: auto;
-/*    background: #222;*/
-    background-color: rgba(0,0,0,0.3);
-/*
+    /*    background: #222;*/
+    background-color: rgba(0, 0, 0, 0.3);
+    /*
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -102,7 +106,7 @@ hr.small {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -135,7 +139,7 @@ hr.small {
 #sidebar-wrapper.active {
     right: 250px;
     width: 250px;
-/*
+    /*
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
@@ -148,6 +152,7 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+
 /* Header */
 
 .header {
@@ -155,18 +160,20 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(img/bg.jpg) no-repeat center center scroll;
+/*    background: url(img/bg.jpg) no-repeat center center scroll;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
+
 /* About */
 
 .about {
     padding: 50px 0;
 }
+
 
 /* Services */
 
@@ -177,6 +184,7 @@ hr.small {
 .service-item {
     margin-bottom: 30px;
 }
+
 
 /* Callout */
 
@@ -191,18 +199,20 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
-.header{
+
+.header {
     display: table;
     width: 100%;
     height: 400px;
     color: #fff;
     text-shadow: black 0 0 10px;
-/*    background: url(callout.jpg.jpg);*/
+    /*    background: url(callout.jpg.jpg);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 /* Portfolio */
 
@@ -222,6 +232,7 @@ hr.small {
     opacity: 0.8;
 }
 
+
 /* Call to Action */
 
 .call-to-action {
@@ -231,6 +242,7 @@ hr.small {
 .call-to-action .btn {
     margin: 10px;
 }
+
 
 /* Map */
 
@@ -248,6 +260,7 @@ hr.small {
     pointer-events: none;
 }
 
+
 /* Footer */
 
 footer {
@@ -255,66 +268,119 @@ footer {
 }
 
 #to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
-#carousel{
-   margin: 0 auto;
- width: 740px;
-    height: 350px;
 
-/*    padding: 0 auto;*/
+#carousel {
+    margin: 0 auto;
+    width: 740px;
+    height: 350px;
+    /*    padding: 0 auto;*/
 }
+
 .carousel-inner > .item > img {
-    
-
-     width: 740px;
+    width: 740px;
     height: 350px;
-/*    max-height: 350px;*/
-/*    margin: 0 auto;*/
-    
-
-   
-/*
+    /*    max-height: 350px;*/
+    /*    margin: 0 auto;*/
+    /*
     width:440px;
        height:280px;
 */
 }
 
-.loading-screen { pointer-events: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 10002; }/*делает шторку непрозрачной*/
+.loading-screen {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10002;
+}
 
-.loading-screen .top {  position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: #efd097; overflow: hidden;}
-.loading-screen .top .loading-screen__logo { bottom: -70px; z-index: 3; }/*положение внизу */
+
+/*делает шторку непрозрачной*/
+
+.loading-screen .top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    overflow: hidden;
+}
+
+.loading-screen .top .loading-screen__logo {
+    bottom: -70px;
+    z-index: 3;
+}
 
 
-.loading-screen__logo { display: block; width: 140px; height: 140px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; position: absolute; background:#473411; left: 50%; margin-left: -70px; }/*КРУГ*/
+/*положение внизу */
+
+.loading-screen__logo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    background: #473411;
+    left: 50%;
+    margin-left: -70px;
+}
+
+
+/*КРУГ*/
+
 body {
-  background: url(../img/marclorenzskycloudytimelapsemp4.mp4);
-  background-size: cover;
+    background: url(../img/marclorenzskycloudytimelapsemp4.mp4);
+    background-size: cover;
 }
 
 .bgvideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -9999;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
 }
-#txt{
-    
-    
-    background: rgba( 255, 255,255, 0.1);
-    
+
+#txt {
+    background: rgba( 255, 255, 255, 0.1);
 }
-.lead{
-    
+
+.lead {
     margin-top: 20px;
 }
-#top{
-     height: 100vh; 
+
+#top {
+    height: 100vh;
+    overflow: scroll;
+}
+
+#my {
+    color: white;
+    font-size: 200%;
+}
+
+#portfolio {
+    color: white;
+    font-size: 200%;
+}
+
+.col-md-12 {
+    font-size: 100px;
+    color: white;
 }
